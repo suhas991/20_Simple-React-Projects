@@ -1,0 +1,28 @@
+import { useState } from "react";
+import data from './data'
+
+export default function Accordian(){
+
+    const [selected,setSelected]=useState(null);
+      return(
+        <div className="wrapper">
+         <div className="accordian">
+          {
+            data && data.length > 0 ?
+             data.map(item =>{
+                return (
+                <div className="item"> 
+                <div className="title">
+                    <h3>{item.question}</h3>
+                    <span>+</span>
+                </div>
+                </div>
+                )
+             }):
+            <div>data not found..!</div>
+
+          }
+         </div>
+        </div>
+      )
+}
