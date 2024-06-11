@@ -1,6 +1,7 @@
 import { useState } from "react";
 import data from "./data";
 import "./accordin.css";
+
 export default function Accordian() {
   const [selected, setSelected] = useState(null);
   const [enable, setEnable] = useState(false);
@@ -10,15 +11,19 @@ export default function Accordian() {
     setSelected(currId === selected ? null : currId);
 
   const handleMulti = (currId) => {
-
+    
     let cpyMultiple = [...multi];
     const findId = cpyMultiple.indexOf(currId);
     
     if(findId === -1){
-    cpyMultiple
+    cpyMultiple.push(currId);
+    }else{
+    cpyMultiple.splice(findId,1);  
     }
-
+    console.log(cpyMultiple);
+    setMultiple(cpyMultiple);
   };
+
   return (
     <div className="acc-wrapper">
       <button
@@ -45,7 +50,7 @@ export default function Accordian() {
                   <span>+</span>
                 </div>
                 <div>
-                  {selected == item.id ? (
+                  {selected == item.id || multi.indexOf(item.id)!== -1? (
                     <div className="content">{item.answer}</div>
                   ) : null}
                 </div>
