@@ -1,8 +1,14 @@
 import { useState } from "react";
-
+import { useEffect } from "react";
 export default function Random() {
   const [type, setType] = useState("hex");
   const [color, setColor] = useState("#000000");
+
+
+  useEffect(() => {
+    if (type === "rgb") handleRgbColor();
+    else handleHexColor();
+  }, [type]);
 
   const randomcolor = (length) => {
     return Math.floor(Math.random() * length);
