@@ -19,7 +19,11 @@ export default function Rating({stars=5}){
     }
 
     return <>
-    <div className="star-rating">
+    <div style={{
+        backgroundColor:"grey",
+        padding:"10px",
+        borderRadius:"5px",
+    }}>
      {
         [...Array(stars)].map((_,index)=>{
             index+=1;
@@ -34,6 +38,10 @@ export default function Rating({stars=5}){
             />
         })
      }
+
+     <h2 style={{color:"black"}}>Rating : {rating}</h2>
+     <button onClick={()=>{setRating(0) 
+        setHover(0)}}>Clear</button>
     </div>
     </>
 }
