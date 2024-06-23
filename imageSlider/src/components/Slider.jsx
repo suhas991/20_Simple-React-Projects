@@ -72,7 +72,22 @@ export default function Slider({url,limit=5,page=1}){
           onClick={handleNext}
           className="arrow arrow-right"
           />
-
+          
+        <span className="circle-indicators">
+        {images && images.length
+          ? images.map((_, index) => (
+              <button
+                key={index}
+                className={
+                  currSlide === index
+                    ? "current-indicator"
+                    : "current-indicator inactive-indicator"
+                }
+                onClick={() => setCurrslide(index)}
+              ></button>
+            ))
+          : null}
+         </span>
         </div>
         </>
     )
