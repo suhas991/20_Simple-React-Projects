@@ -1,8 +1,25 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- ### Getting Started
 
-Currently, two official plugins are available:
+1. Clone this repository:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+   ```bash
+   git clone https://github.com/suhas991/20_Simple-React-Projects.git
+   ```
+
+2. Install any required dependencies (if applicable):
+
+   ```bash
+   cd customHook
+   npm install
+   ```
+
+3. Run the game:
+
+
+   ```bash
+   npm run dev
+   ```
+   
+![image](https://github.com/suhas991/20_Simple-React-Projects/assets/92245302/e52d2b6d-b263-4e39-a21d-3a059761775d)
+
