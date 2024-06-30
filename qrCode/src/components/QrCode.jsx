@@ -7,6 +7,7 @@ export default function Qrcode() {
 
   const handleClick = () => {
     setQrcode(input);
+    setInput('');
   };
 
   return (
@@ -30,6 +31,7 @@ export default function Qrcode() {
             type="text"
             name="qr-code"
             placeholder="Enter the value"
+            value={input}
             onChange={(e) => setInput(e.target.value)}
             style={{
             height:'25px',
